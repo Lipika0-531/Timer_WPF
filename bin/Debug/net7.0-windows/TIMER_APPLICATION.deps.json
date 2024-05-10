@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "TIMER_APPLICATION/1.0.0": {
+        "runtime": {
+          "TIMER_APPLICATION.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TIMER_APPLICATION/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

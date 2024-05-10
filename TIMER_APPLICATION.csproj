@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+<Target Name="CopyCustomFolder" AfterTargets="AfterBuild">
+		<ItemGroup>
+			<SourceFiles Include="$(ProjectDir)Images\**\*.*" />
+		</ItemGroup>
+		<MakeDir Directories="$(OutputPath)Images" />
+		<Copy SourceFiles="@(SourceFiles)" DestinationFolder="$(OutputPath)Images\%(RecursiveDir)" />
+	</Target>
+</Project>

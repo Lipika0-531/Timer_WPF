@@ -1,0 +1,105 @@
+﻿<Page x:Class="SollyTracker.Timer"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SollyTracker"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Timer" Background="White">
+
+    <Grid>
+        <Grid>
+            <DataGrid Name="DataGrid" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Notes" Width="*" />
+                    <DataGridTextColumn Header="Total Hours"  Width="*" />
+                    <DataGridTextColumn Header="Timer" Width="*" />
+                    <DataGridTextColumn>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                        <DataGridTextColumn.Header>
+                            <Grid Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="60"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="1" HorizontalAlignment="Center" Margin="20,0,0,0" x:Name="AddNewButton" Click="Add_New_Button">
+                                    <Image Source="D:\CSharp\TIMER_APPLICATION\TIMER_APPLICATION\Images\AddNew.png" Width="20" Height="20" />
+                                </Button>
+                            </Grid>
+                        </DataGridTextColumn.Header>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                        <DataGridTextColumn.Header>
+                            <Grid Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="60"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="1" HorizontalAlignment="Center" Margin="20,0,0,0" x:Name="FilterBtn" Click="Filter_Click">
+                                    <Image Source="D:\CSharp\TIMER_APPLICATION\TIMER_APPLICATION\Images\Filter.png" Width="20" Height="20" />
+                                </Button>
+                            </Grid>
+                        </DataGridTextColumn.Header>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+    <!--<Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+            <StackPanel>
+                <StackPanel>
+                    <Grid>
+                        <Grid x:Name="MainGrid">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition  Width="1*" SharedSizeGroup="A"/>
+                                    <ColumnDefinition  Width="1*" SharedSizeGroup="A"/>
+                                    <ColumnDefinition  Width="1*" SharedSizeGroup="A"/>
+                                    <ColumnDefinition Width="1*" SharedSizeGroup="A"/>
+                                    <ColumnDefinition Width="1*" SharedSizeGroup="A"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Grid.Column="0" Text="Notes" TextElement.FontFamily="Times New Roman Italic Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <TextBlock Grid.Column="1" Text="TotalHours" TextElement.FontFamily="Times New Roman Italic Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <TextBlock Grid.Column="2" Text="Timer" TextElement.FontFamily="Times New Roman Italic Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <Button Grid.Column="3" TextElement.FontFamily="Times New Roman Italic Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Add_New_Click" >
+                                    <Image Source="D:\SDLC\TimerApplication\TimerApplication\Images\AddNew.png" Width="20" Height="20" />
+                                </Button>
+                                <Button Grid.Column="4" TextElement.FontFamily="Times New Roman Italic Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Filter_Click" >
+                                    <Image Source="D:\SDLC\TimerApplication\TimerApplication\Images\Filter.png" Width="20" Height="20" />
+                                </Button>
+                                <Border BorderBrush="LightSkyBlue" BorderThickness="1" CornerRadius="8">
+                                    <Popup x:Name="FilterPopup" Placement="MousePoint" StaysOpen="False" PopupAnimation="Fade" AllowsTransparency="True" Height="100" >
+                                        <StackPanel Background="Aquamarine">
+                                            <Label Background="AliceBlue" Foreground="Blue" HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" MouseDown="mouse_DownHandled">
+                                                x
+                                            </Label>
+                                            <CheckBox Content="Billable" x:Name="CheckBox1"/>
+                                            <CheckBox Content="Non_Billable" x:Name="CheckBox2"/>
+                                        </StackPanel>
+                                    </Popup>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>-->
+
+</Page>
